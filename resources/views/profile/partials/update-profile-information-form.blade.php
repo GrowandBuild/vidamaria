@@ -119,9 +119,22 @@
                     return;
                 }
                 
+                // Validar tipo de arquivo
+                const allowedTypes = ['image/jpeg', 'image/png', 'image/jpg', 'image/gif'];
+                if (!allowedTypes.includes(file.type)) {
+                    alert('Formato de arquivo não suportado! Use JPG, PNG ou GIF.');
+                    this.value = '';
+                    return;
+                }
+                
                 const reader = new FileReader();
                 reader.onload = function(e) {
-                    document.getElementById('avatar-preview').src = e.target.result;
+                    const preview = document.getElementById('avatar-preview');
+                    preview.src = e.target.result;
+                    // Forçar reload da imagem
+                    preview.onload = function() {
+                        console.log('Imagem carregada com sucesso');
+                    };
                 }
                 reader.readAsDataURL(file);
             }

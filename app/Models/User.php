@@ -64,7 +64,8 @@ class User extends Authenticatable
     public function getAvatarUrlAttribute()
     {
         if ($this->avatar) {
-            return asset('storage/' . $this->avatar);
+            // Adicionar cache busting para forçar atualização
+            return asset('storage/' . $this->avatar) . '?v=' . time();
         }
         
         // Avatar padrão com iniciais (cores premium)
