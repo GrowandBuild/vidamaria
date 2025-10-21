@@ -88,8 +88,11 @@ Route::middleware('auth')->group(function () {
         Route::post('/servicos/{servico}/toggle', [ServicoController::class, 'toggleStatus'])->name('servicos.toggle');
         
         Route::get('/formas-pagamento', [FormaPagamentoController::class, 'index'])->name('formas-pagamento.index');
+        Route::get('/formas-pagamento/create', [FormaPagamentoController::class, 'create'])->name('formas-pagamento.create');
+        Route::post('/formas-pagamento', [FormaPagamentoController::class, 'store'])->name('formas-pagamento.store');
         Route::get('/formas-pagamento/{formaPagamento}/edit', [FormaPagamentoController::class, 'edit'])->name('formas-pagamento.edit');
         Route::put('/formas-pagamento/{formaPagamento}', [FormaPagamentoController::class, 'update'])->name('formas-pagamento.update');
+        Route::delete('/formas-pagamento/{formaPagamento}', [FormaPagamentoController::class, 'destroy'])->name('formas-pagamento.destroy');
         Route::post('/formas-pagamento/{formaPagamento}/toggle', [FormaPagamentoController::class, 'toggleStatus'])->name('formas-pagamento.toggle');
     });
 });

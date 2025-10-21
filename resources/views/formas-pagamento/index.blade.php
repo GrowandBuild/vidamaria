@@ -11,6 +11,10 @@
                     <h2 class="text-xl sm:text-2xl font-bold">💳 Formas de Pagamento</h2>
                     <p class="text-sm text-gray-600 mt-1">Gerencie as taxas de cada forma de pagamento</p>
                 </div>
+                <a href="{{ route('formas-pagamento.create') }}" 
+                   class="bg-vm-gold hover:bg-vm-gold-600 text-vm-navy-900 font-bold py-2 px-4 rounded-lg shadow transition-all flex items-center gap-2">
+                    ➕ Nova Forma
+                </a>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -51,6 +55,16 @@
                                 <button type="submit" 
                                         class="w-full px-4 py-2 {{ $forma->ativo ? 'bg-gray-500 hover:bg-gray-600' : 'bg-green-500 hover:bg-green-600' }} text-white font-semibold rounded-lg shadow transition-all text-sm">
                                     {{ $forma->ativo ? '✕ Desativar' : '✓ Ativar' }}
+                                </button>
+                            </form>
+                            
+                            <form method="POST" action="{{ route('formas-pagamento.destroy', $forma) }}" class="flex-1" 
+                                  onsubmit="return confirm('Tem certeza que deseja excluir esta forma de pagamento?')">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" 
+                                        class="w-full px-4 py-2 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg shadow transition-all text-sm">
+                                    🗑️ Excluir
                                 </button>
                             </form>
                         </div>
