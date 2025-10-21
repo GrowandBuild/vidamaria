@@ -66,12 +66,20 @@ class ProfissionalController extends Controller
 
     public function update(Request $request, Profissional $profissional)
     {
-        $request->validate([
+        $validationRules = [
             'nome' => 'required|string|max:255',
             'telefone' => 'nullable|string|max:20',
             'percentual_comissao' => 'required|numeric|min:0|max:100',
             'avatar' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-        ]);
+        ];
+
+        // Adicionar validações de credenciais apenas para proprietária
+        if (auth()->user()->isProprietaria()) {
+            $validationRules['email'] = 'required|email|max:255|unique:users,email,' . $profissional->user_id;
+            $validationRules['password'] = 'nullable|string|min:8';
+        }
+
+        $request->validate($validationRules);
 
         // Debug: verificar se arquivo foi enviado
         \Log::info('Avatar upload debug', [
@@ -108,6 +116,17 @@ class ProfissionalController extends Controller
         if (isset($avatarPath)) {
             $dadosUser['avatar'] = $avatarPath;
         }
+
+        // Atualizar credenciais se for proprietária
+        if (auth()->user()->isProprietaria()) {
+            $dadosUser['email'] = $request->email;
+            
+            // Atualizar senha apenas se fornecida
+            if ($request->filled('password')) {
+                $dadosUser['password'] = Hash::make($request->password);
+            }
+        }
+
         $profissional->user->update($dadosUser);
 
         return redirect()->route('profissionais.index')
