@@ -23,9 +23,9 @@
         <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/manifest.json">
-        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileColor" content="#0A1647">
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-        <meta name="theme-color" content="#ffffff">
+        <meta name="theme-color" content="#D4AF37">
         
         <!-- PWA Meta Tags -->
         <meta name="apple-mobile-web-app-capable" content="yes">
@@ -36,13 +36,13 @@
         <!-- Icons -->
         <link rel="icon" type="image/svg+xml" href="/favicon.svg">
         <link rel="icon" type="image/x-icon" href="/favicon.ico">
-        <link rel="apple-touch-icon" href="/icon-192.svg">
-        <link rel="icon" sizes="192x192" href="/icon-192.svg">
-        <link rel="icon" sizes="512x512" href="/icon-512.svg">
+        <link rel="apple-touch-icon" href="/apple-icon-180x180.png">
+        <link rel="icon" sizes="192x192" href="/android-icon-192x192.png">
+        <link rel="icon" sizes="512x512" href="/icon-512.png">
         
         <!-- Splash Screens iOS -->
         <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="apple-touch-startup-image" href="/icon-512.svg">
+        <link rel="apple-touch-startup-image" href="/icon-512.png">
         
         <!-- Splash Screens para diferentes dispositivos iOS -->
         <link rel="apple-touch-startup-image" href="/android-icon-192x192.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)">
