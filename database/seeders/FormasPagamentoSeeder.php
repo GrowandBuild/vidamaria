@@ -20,7 +20,10 @@ class FormasPagamentoSeeder extends Seeder
         ];
 
         foreach ($formasPagamento as $forma) {
-            FormaPagamento::create($forma);
+            FormaPagamento::updateOrCreate(
+                ['nome' => $forma['nome']],
+                $forma
+            );
         }
     }
 }
