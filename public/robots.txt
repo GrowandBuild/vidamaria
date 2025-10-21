@@ -1,0 +1,16 @@
+User-agent: *
+Disallow: /agendamentos/
+Disallow: /profissionais/
+Disallow: /clientes/
+Disallow: /servicos/
+Disallow: /financeiro/
+Disallow: /dashboard
+Disallow: /admin/
+Disallow: /login
+Disallow: /register
+
+# Permitir apenas páginas públicas (se houver)
+Allow: /
+
+# Sitemap (criar depois se necessário)
+# Sitemap: https://seudominio.com.br/sitemap.xml

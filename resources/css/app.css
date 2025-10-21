@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-vm-navy-50;
+    }
+}
+
+@layer components {
+    /* Botões Premium */
+    .btn-primary {
+        @apply px-4 py-2 sm:px-6 sm:py-3 bg-vm-gold hover:bg-vm-gold-600 text-vm-navy-900 font-semibold rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 text-sm sm:text-base;
+    }
+    
+    .btn-secondary {
+        @apply px-4 py-2 sm:px-6 sm:py-3 bg-vm-navy-700 hover:bg-vm-navy-600 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl text-sm sm:text-base;
+    }
+    
+    /* Cards Premium */
+    .card-premium {
+        @apply bg-white rounded-xl shadow-lg p-4 sm:p-6 border-t-4 border-vm-gold transition-all duration-300 hover:shadow-2xl;
+    }
+    
+    /* Gradientes Premium */
+    .gradient-navy-gold {
+        @apply bg-gradient-to-br from-vm-navy-800 via-vm-navy-700 to-vm-navy-600;
+    }
+    
+    .gradient-gold {
+        @apply bg-gradient-to-br from-vm-gold-400 via-vm-gold-500 to-vm-gold-600;
+    }
+    
+    /* Texto Dourado */
+    .text-premium {
+        @apply text-transparent bg-clip-text bg-gradient-to-r from-vm-gold-400 to-vm-gold-600 font-bold;
+    }
+    
+    /* Badges Premium */
+    .badge-gold {
+        @apply px-2 py-1 sm:px-3 bg-vm-gold-100 text-vm-gold-800 rounded-full text-xs font-semibold border border-vm-gold-300;
+    }
+    
+    .badge-navy {
+        @apply px-2 py-1 sm:px-3 bg-vm-navy-100 text-vm-navy-800 rounded-full text-xs font-semibold border border-vm-navy-300;
+    }
+    
+    /* Responsivo Mobile */
+    .table-responsive {
+        @apply overflow-x-auto -mx-4 sm:mx-0;
+    }
+    
+    .form-responsive {
+        @apply space-y-3 sm:space-y-4;
+    }
+    
+    .text-mobile-sm {
+        @apply text-xs sm:text-sm;
+    }
+    
+    .text-mobile-base {
+        @apply text-sm sm:text-base;
+    }
+    
+    .text-mobile-lg {
+        @apply text-base sm:text-lg;
+    }
+    
+    .text-mobile-xl {
+        @apply text-lg sm:text-xl;
+    }
+}

@@ -1,0 +1,81 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fundo Azul Marinho com Gradiente Sutil -->
+  <rect width="512" height="512" rx="85" fill="url(#bg-gradient)"/>
+  
+  <!-- Frasco de Esmalte Grande -->
+  <g transform="translate(256, 290)">
+    <!-- Pincel/Aplicador no Topo -->
+    <ellipse cx="0" cy="-200" rx="28" ry="20" fill="#8B711D"/>
+    <rect x="-18" y="-200" width="36" height="100" rx="6" fill="url(#brush-gradient)"/>
+    <rect x="-14" y="-200" width="28" height="25" fill="#FBF8EC" opacity="0.35"/>
+    <ellipse cx="0" cy="-100" rx="20" ry="12" fill="#D4AF37"/>
+    
+    <!-- Tampa Rosqueada Dourada -->
+    <path d="M-58,-100 Q-62,-90 -62,-80 L-62,-50 L62,-50 L62,-80 Q62,-90 58,-100 Z" 
+          fill="url(#cap-gradient)"/>
+    <rect x="-58" y="-90" width="116" height="6" fill="#D4AF37" opacity="0.7"/>
+    <rect x="-58" y="-78" width="116" height="6" fill="#D4AF37" opacity="0.7"/>
+    <rect x="-58" y="-66" width="116" height="6" fill="#D4AF37" opacity="0.7"/>
+    
+    <!-- Gargalo -->
+    <rect x="-45" y="-50" width="90" height="20" fill="#8B711D"/>
+    <rect x="-45" y="-50" width="90" height="6" fill="#D4AF37" opacity="0.4"/>
+    
+    <!-- Corpo Principal do Frasco (Cilíndrico) -->
+    <rect x="-70" y="-30" width="140" height="180" rx="8" 
+          fill="url(#bottle-gradient)" 
+          stroke="#EFE3B3" 
+          stroke-width="6"/>
+    
+    <!-- Reflexos e Brilhos Realistas -->
+    <rect x="-55" y="-20" width="22" height="160" rx="11" fill="white" opacity="0.28"/>
+    <rect x="40" y="0" width="14" height="130" rx="7" fill="white" opacity="0.18"/>
+    <ellipse cx="-40" cy="60" rx="8" ry="40" fill="white" opacity="0.12"/>
+    
+    <!-- Base do Frasco -->
+    <ellipse cx="0" cy="150" rx="65" ry="15" fill="#8B711D" opacity="0.35"/>
+    <ellipse cx="0" cy="148" rx="68" ry="8" fill="#0A1647" opacity="0.2"/>
+  </g>
+  
+  <!-- Decoração: Estrelas e Brilhos -->
+  <g opacity="0.65">
+    <circle cx="120" cy="120" r="8" fill="#D4AF37"/>
+    <circle cx="392" cy="125" r="6" fill="#D4AF37"/>
+    <circle cx="125" cy="390" r="7" fill="#D4AF37"/>
+    <circle cx="387" cy="385" r="8" fill="#D4AF37"/>
+    <path d="M256,90 L260,100 L270,100 L262,107 L266,117 L256,110 L246,117 L250,107 L242,100 L252,100 Z" fill="#D4AF37"/>
+  </g>
+  
+  <defs>
+    <!-- Gradiente de Fundo -->
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1647"/>
+      <stop offset="50%" stop-color="#0F215D"/>
+      <stop offset="100%" stop-color="#142C7C"/>
+    </linearGradient>
+    
+    <!-- Gradiente do Pincel -->
+    <linearGradient id="brush-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FBF8EC"/>
+      <stop offset="40%" stop-color="#DFC267"/>
+      <stop offset="100%" stop-color="#B89627"/>
+    </linearGradient>
+    
+    <!-- Gradiente da Tampa -->
+    <linearGradient id="cap-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#B89627"/>
+      <stop offset="100%" stop-color="#8B711D"/>
+    </linearGradient>
+    
+    <!-- Gradiente do Frasco -->
+    <linearGradient id="bottle-gradient" x1="-25%" y1="0%" x2="25%" y2="100%">
+      <stop offset="0%" stop-color="#F7F1D9"/>
+      <stop offset="20%" stop-color="#DFC267"/>
+      <stop offset="40%" stop-color="#D4AF37"/>
+      <stop offset="60%" stop-color="#B89627"/>
+      <stop offset="80%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#8B711D"/>
+    </linearGradient>
+  </defs>
+</svg>
