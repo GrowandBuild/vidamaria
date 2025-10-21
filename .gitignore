@@ -1,5 +1,5 @@
 # Laravel
-/vendor/
+# /vendor/  # Comentado para incluir no Git
 /node_modules/
 /public/hot
 /public/storage
